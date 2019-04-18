@@ -1,0 +1,7 @@
+# TSP_GA
+遗传算法解决TSP问题（带GUI，以十个中国城市为例）
+ga.py为遗传算法类，life.py为种群类，TSP.py为主文件，运行TSP.py即可。
+在ga.py中为ga类新增了StartCity与gene序列两个参数以实现自定义起始城市和经过的城市。
+在TSP.py中初始化citys列表保存所有城市的经纬度并以其下标作为城市编码，citys2列表用来生成保存每次运行所选的城市。position列表保存各城市在canvas画布上的坐标以便绘图。
+按下确认按钮后会生成经过的城市列表citys2，为其编码获得CityOrder，再对其用遗传算法进行迭代，获得ga.best.gene序列，最后输出结果并绘图。
+在TSP.py中引入了geopy模块用于通过经纬度计算两地间距离。
